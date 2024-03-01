@@ -1,0 +1,67 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*, *::after, *::before {
+  @apply font-poppins;
+}
+
+body {
+  @apply bg-[url('/images/bg-intro-desktop.png')] bg-red md:flex md:h-screen md:w-full md:items-center;
+}
+
+main {
+  @apply flex max-md:flex-col justify-between max-w-6xl w-full h-full mx-auto md:px-6 px-5 items-center my-16;
+}
+
+#content {
+  @apply md:w-1/2 w-full max-md:text-center text-white flex flex-col justify-center pr-6;
+}
+
+#content h1 {
+  @apply md:text-5xl text-3xl font-bold;
+}
+
+#content p {
+  @apply pt-8;
+}
+
+#form-control form {
+  @apply flex flex-col bg-white md:p-10 p-4 rounded-md shadow-[1px_8px_0px_1px_rgb(0,0,0,0.2)];
+}
+
+#free-trial {
+  @apply bg-blue text-white text-center px-2 py-4 md:py-6 rounded-md my-6 shadow-[1px_8px_0px_1px_rgb(0,0,0,0.2)];
+}
+
+#form-control input {
+  @apply focus:outline-none w-full;
+}
+
+#form-control button {
+  @apply bg-green max-w-md text-white py-4 rounded-md my-4 shadow-[1px_4px_3px_green] uppercase tracking-wider;
+}
+
+#form-control form div {
+  @apply flex border border-grayish-blue my-2 max-w-md px-8 py-3 rounded-md shadow-inner focus:outline-grayish-blue placeholder:font-medium;
+}
+
+#form-control p {
+  @apply text-xs text-grayish-blue text-center;
+}
+
+#form-control p span {
+  @apply text-red font-bold;
+}
+
+#form-control span {
+  @apply text-xs text-red text-right py-1 font-semibold;
+}
+
+.error, form div img {
+  @apply hidden;
+}
+
+.error.active, form div img.active {
+  @apply block;
+}
